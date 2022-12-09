@@ -4,6 +4,13 @@
 
 .container{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    text-align: center;
+}
+
+.btn_dark{
+    background-color: rgb(196, 196, 196);
+}
+
+.color_letter{
+    color: #FFF;
 }

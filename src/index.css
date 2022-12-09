@@ -17,6 +17,7 @@ code {
   border: none;
   width: 100%;
   cursor: pointer;
+  margin: 5px;
 }
 
 h1{
@@ -44,12 +45,16 @@ footer {
   display: flex;
   justify-content: center;
   text-align: center;
-  padding: 2rem;
+  padding: 2.5rem;
   position: relative;
   bottom: 0;
-  width: 90%;
+  max-width: 80vw;
   height: 40px;
-  margin-top: 2rem;
+
+}
+
+header{
+  background-color:#d8d8d8 ;
 }
 
 footer > img{
@@ -68,6 +73,11 @@ form{
   width: 300px;
   height: 100px;
   margin: 0 auto;
+}
+
+form .dark{
+  background-color: #12121296;
+  color: white;
 }
 
 .card{
@@ -119,4 +129,20 @@ tr:nth-child(even) {
 }
 .dark > a {
   color: white;
+}
+
+.title_home{
+  margin: 0%;
+  padding: 1%;
+}
+
+#dark{
+  background-color: #52525296;
+  color: white;
+}
+
+
+
+.padding_left{
+  padding-left: 5%;
 }

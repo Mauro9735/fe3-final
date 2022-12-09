@@ -1,0 +1,36 @@
+.container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0%;
+}
+
+.container_nav{
+    display: flex;
+    justify-content: space-around;
+    gap:10%;
+    margin-left:5%;
+    margin-right: -45.5%;
+}
+
+.title{
+    margin-left: -25%;
+    font-size: 1.5rem;
+}
+
+
+.title > span{
+    color: #fe3434;
+}
+.title:hover > span{
+    opacity: 50%;
+}
+
+.title_nav_dark{
+    color: #FFF;
+}
+
+
+.btn_light{
+    background-color: rgb(92, 92, 140);
+}

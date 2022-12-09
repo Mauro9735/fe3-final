@@ -1,0 +1,31 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo_size{
+    max-width: 30%;
+    margin: 0%;
+}
+
+.container_logos{
+    display: flex;
+    justify-content: space-around;
+    gap: 5%;
+    margin-left: 30%;
+
+}
+
+.icon_size {
+    max-width: 2rem;
+    height: auto;
+    filter: brightness(0);
+}
+
+.icon_size_dark{
+    max-width: 2rem;
+    height: auto;
+    filter: brightness(0) invert(1);
+}
+

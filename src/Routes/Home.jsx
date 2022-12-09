@@ -11,8 +11,8 @@ const Home = () => {
 
 
   return (
-    <main className="" >
-      <h1>Home</h1>
+    <main>
+      <h1 className='title_home'>Home</h1>
       <div className='card-grid'>
         {/* Aqui deberias renderizar las cards */}
         { odontologo.length ? odontologo.map(datos => 
