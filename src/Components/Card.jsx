@@ -3,6 +3,7 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import Styles from "./Card.module.css"
 import { ContextGlobal } from "./utils/global.context";
+import { getData} from "./utils/localStorage";
 
 
 
@@ -12,25 +13,19 @@ const Card = ({name, username,id}) => {
 
   const {theme}=useContext(ContextGlobal);
 
-  localStorage.setItem("favs", "[]")
-  const addNewItem = (item) => {
-    let odontoList = JSON.parse(localStorage.getItem("favs"))
-    if ( JSON.parse(localStorage.getItem("favs")).some(odonto => odonto.name === item.name) ){
-      console.log("Odontologo ya esta en favoritos");
-    } else {
-      odontoList.push(item);
-      localStorage.setItem("favs", JSON.stringify(odontoList));
-    }
-  }
-
 
   const addFav = ()=>{
     
-    addNewItem({name: name, username: username, id: id})
-  
+    const datos =  getData();
+
+    if (datos.some(odonto => odonto.name === name) ){
+          console.log("Odontologo ya esta en favoritos");
+        } else {
+          datos.push({id: id, username: username, name:name})
+          localStorage.setItem("favs",JSON.stringify(datos));
+        }
   }
 
-    // Aqui iria la logica para agregar la Card en el localStorage  
   
 
   return (
