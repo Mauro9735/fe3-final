@@ -1,6 +1,8 @@
 import React from "react";
+import { useContext } from "react";
+import { Link } from "react-router-dom";
+import { ContextGlobal } from "../Components/utils/global.context";
 
-import Card from "../Components/Card";
 
 
 
@@ -8,19 +10,32 @@ import Card from "../Components/Card";
 
 const Favs = () => {
 
-  const listaOdontoFavs =JSON.parse(localStorage.getItem("favs"));
+  const {theme} = useContext(ContextGlobal);
+  const tema = theme.theme;
+
+  const favs = localStorage.getItem("favs");
+  const listaOdontoFavs = favs ? JSON.parse(favs):[];
+
 
   return (
     <>
       <h1>Dentists Favs</h1>
-      <div className="card-grid">
-        {/* este componente debe consumir los destacados del localStorage */}
-        {/* Deberan renderizar una Card por cada uno de ellos */}
-        { listaOdontoFavs.length ? listaOdontoFavs.map(datos => 
-          (<Card {...datos} key={datos.id}/>)
-        ):null
-        }
+      <div className="card-grid">            
+          {listaOdontoFavs.length? listaOdontoFavs.map(datos =>{
+            return(
+              <div className="card" key={datos.id}>
+              <div className="container_favs">
+              <Link to={`/dentist/${datos.id}`}>
+                  <img src="./images/doctor.jpg"alt="Doctor img" className="img_favs"/>
+                  <h4 className={tema==="dark"?"color_letter_favs":""}>{datos.name}</h4>
+                  <p  className={tema==="dark"?"color_letter_favs":""}>{datos.username}</p>
+              </Link>
+            </div>
+            </div>
+            )
+            }):null
 
+          }
       </div>
     </>
   );

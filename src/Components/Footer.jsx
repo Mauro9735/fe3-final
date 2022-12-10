@@ -24,7 +24,8 @@ const Footer = () => {
 
 
 {/* 
-      <a href="https://facebook.com" target="_blank"></a>
+      Eslint ponia problemas con enviar a otra páginas
+      <a href="https://facebook.com" target="_blank"></a> 
 <a href="https://instagram.com" target="_blank"></a>
 <a href="https://whatsapp.com" target="_blank"></a>
 <a href="https://tiktok.com" target="_blank"></a> */}

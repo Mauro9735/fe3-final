@@ -146,3 +146,16 @@ tr:nth-child(even) {
 .padding_left{
   padding-left: 5%;
 }
+
+.container_favs{
+  display: flex;
+  text-align: center;
+}
+
+.img_favs{
+  width: 100%;
+}
+
+.color_letter_favs{
+  color: #fff;
+}

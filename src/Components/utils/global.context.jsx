@@ -39,12 +39,12 @@ export const ContextProvider = ({ children }) => {
 
 //Pruebas reducer
 const themeReducer = (state,action) =>{
-  console.log("Action");
-  console.log(action);
-  console.log("state.theme");
-  console.log(state.theme);
-  console.log("State");
-  console.log(state);
+  // console.log("Action");
+  // console.log(action);
+  // console.log("state.theme");
+  // console.log(state.theme);
+  // console.log("State");
+  // console.log(state);
   // console.log("Action.type");
   // console.log(action.type);
   switch(action.type){
