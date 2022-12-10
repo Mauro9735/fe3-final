@@ -6,14 +6,32 @@ import { ContextGlobal } from "./utils/global.context";
 
 
 
+
 const Card = ({name, username,id}) => {
 
 
   const {theme}=useContext(ContextGlobal);
 
-  const addFav = ()=>{
-    // Aqui iria la logica para agregar la Card en el localStorage
+  localStorage.setItem("favs", "[]")
+  const addNewItem = (item) => {
+    let odontoList = JSON.parse(localStorage.getItem("favs"))
+    if ( JSON.parse(localStorage.getItem("favs")).some(odonto => odonto.name === item.name) ){
+      console.log("Odontologo ya esta en favoritos");
+    } else {
+      odontoList.push(item);
+      localStorage.setItem("favs", JSON.stringify(odontoList));
+    }
   }
+
+
+  const addFav = ()=>{
+    
+    addNewItem({name: name, username: username, id: id})
+  
+  }
+
+    // Aqui iria la logica para agregar la Card en el localStorage  
+  
 
   return (
     <div className="card">

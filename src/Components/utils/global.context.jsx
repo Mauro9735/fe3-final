@@ -5,6 +5,11 @@ export const initialState = {theme:"light", data: []}
 
 export const ContextGlobal = createContext(undefined);
 
+
+
+
+
+
 export const ContextProvider = ({ children }) => {
 
   //Traer info de la Api
@@ -60,11 +65,6 @@ const toggleTheme = () =>{
   dispatch({type:"theme"})
   console.log(theme.theme);
 };
-
-
-
-
-
 
 
 
